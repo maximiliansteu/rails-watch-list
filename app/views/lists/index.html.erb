@@ -1,0 +1,23 @@
+<% list_sample = %w[movie film cinema television actor hollywood] %>
+
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://source.unsplash.com/SnXIF8_2oPw);">
+  <div class="container">
+    <h1>Save your movies!</h1>
+    <p>Discover the best movies recommended by people you trust </p>
+    <%= link_to 'New List', new_list_path, class: "btn btn-primary"%>
+  </div>
+</div>
+
+<h3 id="wrapper-header">Discover your lists🍿</h3>
+<div class="wrapper">
+  <% @lists.each do |list| %>
+    <%= link_to list_path(list) do %>
+      <div class="my-card">
+        <img src= <%="https://source.unsplash.com/1600x900/?#{list_sample.sample}"%> alt="" id="card-img">
+        <div class="my-card-info">
+          <%= list.name %>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+</div>
