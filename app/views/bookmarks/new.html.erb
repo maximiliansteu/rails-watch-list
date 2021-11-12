@@ -1,5 +1,13 @@
-<%= simple_form_for [@list, @bookmark], class: "my-form" do |f| %>
-  <%= f.input :comment %>
-  <%= f.association :movie %>
-  <%= f.button :submit %>
-<% end %>
+<div class="form-page">
+  <div class="outer-form-container">
+    <h3 id="form-header">Create a new list and share it 🎥</h3>
+
+    <div class="form-container">
+      <%= simple_form_for @list, class: "my-form" do |f| %>
+        <%= f.input :comment %>
+        <%= f.association :movie %>
+        <%= f.button :submit %>
+      <% end %>
+    </div>
+  </div>
+</div>
