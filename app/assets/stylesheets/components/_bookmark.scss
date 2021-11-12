@@ -32,5 +32,33 @@
 
 .delete-icon {
   padding: 20px;
+}
 
+.movie-list {
+  height: 300px;
+  background-size: cover;
+  text-align: center;
+  position:relative
+}
+
+.list-info {
+  padding: 80px;
+}
+
+#list-header {
+  color: white;
+}
+
+#edit {
+  position: absolute;
+  left: 1247px;
+  bottom: 30px;
+  color: white;
+}
+
+#back {
+  position: absolute;
+  left: 50px;
+  top: 30px;
+  color: white;
 }
