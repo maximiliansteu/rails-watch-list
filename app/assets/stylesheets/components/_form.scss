@@ -1,6 +1,11 @@
+
+
 .form-page {
   background-image: url("https://source.unsplash.com/AtPWnYNDJnM");
   background-size: cover;
+  margin-top: 0px;
+  padding-top: 0px;
+  height: 100vh;
 }
 
 .form-container {
@@ -18,4 +23,6 @@
 #form-header {
   color: white;
   margin-bottom: 20px;
+  margin-top: 50px;
+  padding: 30px;
 }
