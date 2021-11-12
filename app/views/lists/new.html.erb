@@ -1,5 +1,13 @@
-<%= simple_form_for @list do |f| %>
-  <%= f.input :name %>
-  <%= f.input :photo, as: :file %>
-  <%= f.button :submit %>
-<% end %>
+<div class="form-page">
+  <div class="outer-form-container">
+    <h3 id="form-header">Create a new list and share it 🎥</h3>
+
+    <div class="form-container">
+      <%= simple_form_for @list, class: "my-form" do |f| %>
+        <%= f.input :name %>
+        <%= f.input :photo, as: :file %>
+        <%= f.button :submit, class:"btn btn-primary" %>
+      <% end %>
+    </div>
+  </div>
+</div>
