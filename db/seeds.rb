@@ -7,10 +7,10 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'faker'
 
-rating =
-
-
 puts 'clear data'
+
+Bookmark.destroy_all
+List.destroy_all
 Movie.destroy_all
 
 puts 'insert data'
@@ -26,3 +26,9 @@ puts 'insert data'
 end
 
 puts "created #{Movie.all.count}"
+
+List.create!(name: 'All Time Favourites')
+
+List.create!(name: 'Recommendations')
+
+puts "created #{List.all.count}"
