@@ -1,6 +1,6 @@
 <% list = %w[portrait, happy, laughing, face, hair, sunglassed] %>
 
-<div class="movie-list" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path @list.photo.key, height: 600, crop: :fill %>')">
+<div class="movie-list" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path @list.photo.key, height: 600, crop: :fill if @list.photo.attached? %>')">
   <div class="list-info">
     <h1 id="list-header"><%= @list.name %></h1>
     <%= link_to 'Add movie', new_list_bookmark_path(@list), class: "btn btn-primary" %>
